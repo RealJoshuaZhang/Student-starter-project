@@ -18,6 +18,9 @@ public class UserHandler {
     }
 
     public boolean updatePassword(Long personId, String password) throws SQLException {
+        if(password.isEmpty()){
+            return false;
+        }
         // TODO: Load the user via userDAO, validate the request, and update the password.
         throw new UnsupportedOperationException("TODO: implement updatePassword");
     }
